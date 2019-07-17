@@ -9,10 +9,12 @@
 #import "ViewController.h"
 #import "RuntimeVC.h"
 #import "RunloopVC.h"
+#import "ButtonAreaVC.h"
 
 @interface ViewController ()
 - (IBAction)goRuntime:(id)sender;
 - (IBAction)goRunloop:(id)sender;
+- (IBAction)goButtonArea:(id)sender;
 
 @end
 
@@ -34,6 +36,12 @@
 - (IBAction)goRunloop:(id)sender {
     RunloopVC *vc = [[RunloopVC alloc]initWithNibName:@"RunloopVC" bundle:nil];
     vc.title=@"Runloop";
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)goButtonArea:(id)sender {
+    ButtonAreaVC *vc = [[ButtonAreaVC alloc]initWithNibName:@"ButtonAreaVC" bundle:nil];
+    vc.title=@"ButtonArea";
     [self.navigationController pushViewController:vc animated:YES];
 }
 

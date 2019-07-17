@@ -19,6 +19,9 @@
 		960C1E5322DC61E600000EA5 /* RuntimeObj+test.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E5222DC61E600000EA5 /* RuntimeObj+test.m */; };
 		960C1E5722DC6D5B00000EA5 /* RunloopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E5522DC6D5B00000EA5 /* RunloopVC.m */; };
 		960C1E5822DC6D5B00000EA5 /* RunloopVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C1E5622DC6D5B00000EA5 /* RunloopVC.xib */; };
+		960C1E5D22DEF5FE00000EA5 /* ButtonAreaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E5B22DEF5FE00000EA5 /* ButtonAreaVC.m */; };
+		960C1E5E22DEF5FE00000EA5 /* ButtonAreaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C1E5C22DEF5FE00000EA5 /* ButtonAreaVC.xib */; };
+		960C1E6122DF152400000EA5 /* UIButton+large.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E6022DF152400000EA5 /* UIButton+large.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,11 @@
 		960C1E5422DC6D5B00000EA5 /* RunloopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopVC.h; sourceTree = "<group>"; };
 		960C1E5522DC6D5B00000EA5 /* RunloopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopVC.m; sourceTree = "<group>"; };
 		960C1E5622DC6D5B00000EA5 /* RunloopVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunloopVC.xib; sourceTree = "<group>"; };
+		960C1E5A22DEF5FE00000EA5 /* ButtonAreaVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonAreaVC.h; sourceTree = "<group>"; };
+		960C1E5B22DEF5FE00000EA5 /* ButtonAreaVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonAreaVC.m; sourceTree = "<group>"; };
+		960C1E5C22DEF5FE00000EA5 /* ButtonAreaVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonAreaVC.xib; sourceTree = "<group>"; };
+		960C1E5F22DF152400000EA5 /* UIButton+large.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+large.h"; sourceTree = "<group>"; };
+		960C1E6022DF152400000EA5 /* UIButton+large.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+large.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		960C1E2722DC42C300000EA5 /* iOSKnowledgeTrain */ = {
 			isa = PBXGroup;
 			children = (
+				960C1E5922DEF5DA00000EA5 /* buttonArea */,
 				960C1E4222DC430400000EA5 /* nsoperation */,
 				960C1E4122DC42FC00000EA5 /* nsthread */,
 				960C1E4022DC42F400000EA5 /* block */,
@@ -135,6 +144,18 @@
 			children = (
 			);
 			path = nsoperation;
+			sourceTree = "<group>";
+		};
+		960C1E5922DEF5DA00000EA5 /* buttonArea */ = {
+			isa = PBXGroup;
+			children = (
+				960C1E5A22DEF5FE00000EA5 /* ButtonAreaVC.h */,
+				960C1E5B22DEF5FE00000EA5 /* ButtonAreaVC.m */,
+				960C1E5C22DEF5FE00000EA5 /* ButtonAreaVC.xib */,
+				960C1E5F22DF152400000EA5 /* UIButton+large.h */,
+				960C1E6022DF152400000EA5 /* UIButton+large.m */,
+			);
+			path = buttonArea;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +220,7 @@
 				960C1E5822DC6D5B00000EA5 /* RunloopVC.xib in Resources */,
 				960C1E3022DC42C300000EA5 /* Main.storyboard in Resources */,
 				960C1E4722DC435200000EA5 /* RuntimeVC.xib in Resources */,
+				960C1E5E22DEF5FE00000EA5 /* ButtonAreaVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960C1E6122DF152400000EA5 /* UIButton+large.m in Sources */,
 				960C1E5322DC61E600000EA5 /* RuntimeObj+test.m in Sources */,
 				960C1E2D22DC42C300000EA5 /* ViewController.m in Sources */,
 				960C1E5722DC6D5B00000EA5 /* RunloopVC.m in Sources */,
@@ -216,6 +239,7 @@
 				960C1E2A22DC42C300000EA5 /* AppDelegate.m in Sources */,
 				960C1E4622DC435200000EA5 /* RuntimeVC.m in Sources */,
 				960C1E4A22DC5EAF00000EA5 /* RuntimeObj.m in Sources */,
+				960C1E5D22DEF5FE00000EA5 /* ButtonAreaVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6YKQ6CW9F3;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = iOSKnowledgeTrain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -376,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6YKQ6CW9F3;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = iOSKnowledgeTrain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

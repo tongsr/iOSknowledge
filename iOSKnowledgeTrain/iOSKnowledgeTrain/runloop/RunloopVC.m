@@ -29,6 +29,7 @@
     
     NSTimer* timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerRun) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    //此时currentRunLoop在主线程中，而滑动textview时响应的runnloop也是主线程中的，所以使用defaultmode会导致两者冲突
     
     
     [self testKeepThread];
