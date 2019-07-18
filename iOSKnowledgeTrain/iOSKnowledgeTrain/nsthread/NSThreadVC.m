@@ -24,14 +24,57 @@
     [thread start];
     
     
-    [self sellticketWithSychronized];
-    // Do any additional setup after loading the view from its nib.
+    //[self sellticketWithSychronized];
+    [self sellTicketWithNSLock];
 }
 
 
 
 ///使用nslock加锁进行售票
 -(void)sellTicketWithNSLock{
+    self.ticket_count=18;
+    NSLock *lock = [[NSLock alloc]init];
+    [NSThread detachNewThreadWithBlock:^{
+        [NSThread currentThread].name=@"售票员1";
+        while (YES) {
+            [NSThread sleepForTimeInterval:1.0f];
+            [lock lock];
+            if (self.ticket_count>0) {
+                
+                
+                self.ticket_count--;
+                NSLog(@"%@,leftTicket= %d",[NSThread currentThread].name,self.ticket_count);
+                
+            }
+            else{
+                [[NSThread currentThread]cancel];
+                break;
+            }
+            [lock unlock];
+        }
+    }];
+    
+    [NSThread detachNewThreadWithBlock:^{
+        [NSThread currentThread].name=@"售票员2";
+        while (YES) {
+            [NSThread sleepForTimeInterval:1.0f];
+            [lock lock];
+            if (self.ticket_count>0) {
+                
+                
+                self.ticket_count--;
+                NSLog(@"%@,leftTicket= %d",[NSThread currentThread].name,self.ticket_count);
+                
+            }
+            else{
+                [[NSThread currentThread]cancel];
+                break;
+            }
+            [lock unlock];
+        }
+    }];
+    
+    
     
 }
 
