@@ -22,6 +22,8 @@
 		960C1E5D22DEF5FE00000EA5 /* ButtonAreaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E5B22DEF5FE00000EA5 /* ButtonAreaVC.m */; };
 		960C1E5E22DEF5FE00000EA5 /* ButtonAreaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C1E5C22DEF5FE00000EA5 /* ButtonAreaVC.xib */; };
 		960C1E6122DF152400000EA5 /* UIButton+large.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E6022DF152400000EA5 /* UIButton+large.m */; };
+		960C1E6522E07C1E00000EA5 /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E6322E07C1E00000EA5 /* NSThreadVC.m */; };
+		960C1E6622E07C1E00000EA5 /* NSThreadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C1E6422E07C1E00000EA5 /* NSThreadVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,9 @@
 		960C1E5C22DEF5FE00000EA5 /* ButtonAreaVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonAreaVC.xib; sourceTree = "<group>"; };
 		960C1E5F22DF152400000EA5 /* UIButton+large.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+large.h"; sourceTree = "<group>"; };
 		960C1E6022DF152400000EA5 /* UIButton+large.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+large.m"; sourceTree = "<group>"; };
+		960C1E6222E07C1E00000EA5 /* NSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
+		960C1E6322E07C1E00000EA5 /* NSThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadVC.m; sourceTree = "<group>"; };
+		960C1E6422E07C1E00000EA5 /* NSThreadVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSThreadVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +140,9 @@
 		960C1E4122DC42FC00000EA5 /* nsthread */ = {
 			isa = PBXGroup;
 			children = (
+				960C1E6222E07C1E00000EA5 /* NSThreadVC.h */,
+				960C1E6322E07C1E00000EA5 /* NSThreadVC.m */,
+				960C1E6422E07C1E00000EA5 /* NSThreadVC.xib */,
 			);
 			path = nsthread;
 			sourceTree = "<group>";
@@ -215,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960C1E6622E07C1E00000EA5 /* NSThreadVC.xib in Resources */,
 				960C1E3522DC42C400000EA5 /* LaunchScreen.storyboard in Resources */,
 				960C1E3222DC42C400000EA5 /* Assets.xcassets in Resources */,
 				960C1E5822DC6D5B00000EA5 /* RunloopVC.xib in Resources */,
@@ -232,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				960C1E6122DF152400000EA5 /* UIButton+large.m in Sources */,
+				960C1E6522E07C1E00000EA5 /* NSThreadVC.m in Sources */,
 				960C1E5322DC61E600000EA5 /* RuntimeObj+test.m in Sources */,
 				960C1E2D22DC42C300000EA5 /* ViewController.m in Sources */,
 				960C1E5722DC6D5B00000EA5 /* RunloopVC.m in Sources */,
