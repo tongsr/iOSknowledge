@@ -24,14 +24,24 @@
     [thread start];
     
     
-    [self sellticket];
+    [self sellticketWithSychronized];
     // Do any additional setup after loading the view from its nib.
 }
 
 
--(void)sellticket{
-    self.ticket_count=20;
+
+///使用nslock加锁进行售票
+-(void)sellTicketWithNSLock{
     
+}
+
+
+
+
+////使用@synchronized加锁进行售票
+
+-(void)sellticketWithSychronized{
+    self.ticket_count=20;
     
     NSThread *thread1=[[NSThread alloc]initWithTarget:self selector:@selector(startSell) object:nil];
     thread1.name=@"售票员1";
