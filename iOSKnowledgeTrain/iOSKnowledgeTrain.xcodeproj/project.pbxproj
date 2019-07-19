@@ -88,9 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				960C1E5922DEF5DA00000EA5 /* buttonArea */,
-				960C1E4222DC430400000EA5 /* nsoperation */,
 				960C1E4122DC42FC00000EA5 /* nsthread */,
-				960C1E4022DC42F400000EA5 /* block */,
 				960C1E3F22DC42E600000EA5 /* runloop */,
 				960C1E3E22DC42DB00000EA5 /* runtime */,
 				960C1E2822DC42C300000EA5 /* AppDelegate.h */,
@@ -130,13 +128,6 @@
 			path = runloop;
 			sourceTree = "<group>";
 		};
-		960C1E4022DC42F400000EA5 /* block */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = block;
-			sourceTree = "<group>";
-		};
 		960C1E4122DC42FC00000EA5 /* nsthread */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,13 +136,6 @@
 				960C1E6422E07C1E00000EA5 /* NSThreadVC.xib */,
 			);
 			path = nsthread;
-			sourceTree = "<group>";
-		};
-		960C1E4222DC430400000EA5 /* nsoperation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = nsoperation;
 			sourceTree = "<group>";
 		};
 		960C1E5922DEF5DA00000EA5 /* buttonArea */ = {

@@ -12,10 +12,14 @@
 
 
 - (CGRect)enlargedRect {
-        return CGRectMake(self.bounds.origin.x - 100,
-                          self.bounds.origin.y - 100,
-                          self.bounds.size.width + 200,
-                          self.bounds.size.height + 200);
+//        return CGRectMake(self.bounds.origin.x - 100,
+//                          self.bounds.origin.y - 100,
+//                         self.bounds.size.width + 200,
+//                         self.bounds.size.height + 200);
+    return CGRectMake(self.bounds.origin.x ,
+                      self.bounds.origin.y ,
+                      self.bounds.size.width,
+                      self.bounds.size.height );
 
 }
 

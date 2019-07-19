@@ -10,28 +10,59 @@
 
 @interface NSThreadVC ()
 @property(assign,nonatomic)int ticket_count;
+
+- (IBAction)nsthread_sychronized_test:(id)sender;
+
+- (IBAction)nsthread_nslock_test:(id)sender;
+
+- (IBAction)nsoperation_test:(id)sender;
+
+- (IBAction)gcd_test:(id)sender;
+
 @end
 
 @implementation NSThreadVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSThread *thread = [[NSThread alloc]initWithBlock:^{
-        NSLog(@"hello");
-    }];
-    [thread setName:@"The Second Thread"];
-    [thread start];
-    
-    
-    //[self sellticketWithSychronized];
-    [self sellTicketWithNSLock];
 }
 
 
 
-///使用nslock加锁进行售票
--(void)sellTicketWithNSLock{
+
+
+
+
+
+-(void)startSell{
+    
+    while (YES) {
+        [NSThread sleepForTimeInterval:1.0f];
+        @synchronized (self) {
+            if (self.ticket_count==0) {
+                //[NSThread cancel];
+                break;
+            }else{
+                self.ticket_count--;
+                NSLog(@"%@,leftTicket= %d",[NSThread currentThread].name,self.ticket_count);
+            }
+        }
+    }
+}
+
+- (IBAction)nsthread_sychronized_test:(id)sender {
+    self.ticket_count=20;
+    
+    NSThread *thread1=[[NSThread alloc]initWithTarget:self selector:@selector(startSell) object:nil];
+    thread1.name=@"售票员1";
+    [thread1 start];
+    
+    NSThread *thread2=[[NSThread alloc]initWithTarget:self selector:@selector(startSell) object:nil];
+    thread2.name=@"售票员2";
+    [thread2 start];
+}
+
+- (IBAction)nsthread_nslock_test:(id)sender {
     self.ticket_count=18;
     NSLock *lock = [[NSLock alloc]init];
     [NSThread detachNewThreadWithBlock:^{
@@ -73,7 +104,27 @@
             [lock unlock];
         }
     }];
+}
+
+- (IBAction)nsoperation_test:(id)sender {
+    self.ticket_count=18;
+    NSOperationQueue *queue=[[NSOperationQueue alloc]init];
     
+    NSInvocationOperation *op1 = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(startSell) object:nil];
+    
+    NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
+        [self startSell];
+    }];
+    
+    NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"finished");
+    }];
+    [op3 addDependency:op2];
+    
+    
+    [queue addOperation:op1];
+    [queue addOperation:op2];
+    [queue addOperation:op3];
     
     
 }
@@ -81,35 +132,8 @@
 
 
 
-////使用@synchronized加锁进行售票
-
--(void)sellticketWithSychronized{
-    self.ticket_count=20;
+- (IBAction)gcd_test:(id)sender {
     
-    NSThread *thread1=[[NSThread alloc]initWithTarget:self selector:@selector(startSell) object:nil];
-    thread1.name=@"售票员1";
-    [thread1 start];
-    
-    NSThread *thread2=[[NSThread alloc]initWithTarget:self selector:@selector(startSell) object:nil];
-    thread2.name=@"售票员2";
-    [thread2 start];
-}
-
-
-
--(void)startSell{
-    
-    while (YES) {
-        [NSThread sleepForTimeInterval:1.0f];
-        @synchronized (self) {
-            if (self.ticket_count==0) {
-                [[NSThread currentThread]cancel];
-            }else{
-                self.ticket_count--;
-                NSLog(@"%@,leftTicket= %d",[NSThread currentThread].name,self.ticket_count);
-            }
-        }
-    }
 }
 
 
