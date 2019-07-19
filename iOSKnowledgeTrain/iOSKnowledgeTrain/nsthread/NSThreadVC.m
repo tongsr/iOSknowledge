@@ -133,6 +133,17 @@
 
 
 - (IBAction)gcd_test:(id)sender {
+    self.ticket_count=9;
+    dispatch_queue_t queue = dispatch_queue_create("abc", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        [NSThread currentThread].name=@"窗口1";
+        [self startSell];
+    });
+    dispatch_async(queue, ^{
+        [NSThread currentThread].name=@"窗口2";
+        [self startSell];
+    });
+    
     
 }
 
