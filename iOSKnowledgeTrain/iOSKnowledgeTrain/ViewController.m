@@ -28,7 +28,7 @@
     [super viewDidLoad];
     self.tableview.delegate=self;
     self.tableview.dataSource=self;
-    self.array=[NSArray arrayWithObjects:@"runtime",@"runloop",@"buttonArea",@"NSThread", nil];
+    self.array=[NSArray arrayWithObjects:@"runtime",@"runloop",@"buttonArea",@"NSThread",@"kvo", nil];
     [self.tableview reloadData];
 }
 
@@ -89,6 +89,9 @@
         case 3:
             [self goNSThread];
             break;
+        case 4:
+            [self goKvoKvc];
+            break;
         default:
             break;
     }
@@ -103,6 +106,8 @@
     
 }
 
-
+-(void)goKvoKvc{
+    
+}
 
 @end

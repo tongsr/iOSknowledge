@@ -87,6 +87,7 @@
 		960C1E2722DC42C300000EA5 /* iOSKnowledgeTrain */ = {
 			isa = PBXGroup;
 			children = (
+				960C1E6722E1C91600000EA5 /* kvo */,
 				960C1E5922DEF5DA00000EA5 /* buttonArea */,
 				960C1E4122DC42FC00000EA5 /* nsthread */,
 				960C1E3F22DC42E600000EA5 /* runloop */,
@@ -148,6 +149,13 @@
 				960C1E6022DF152400000EA5 /* UIButton+large.m */,
 			);
 			path = buttonArea;
+			sourceTree = "<group>";
+		};
+		960C1E6722E1C91600000EA5 /* kvo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = kvo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
