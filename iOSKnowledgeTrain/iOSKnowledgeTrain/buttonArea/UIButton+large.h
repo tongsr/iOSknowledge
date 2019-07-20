@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (large)
-
+-(void)btnBigger:(int)size;
 @end
 
 NS_ASSUME_NONNULL_END

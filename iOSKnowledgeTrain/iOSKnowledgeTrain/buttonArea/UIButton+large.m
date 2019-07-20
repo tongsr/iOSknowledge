@@ -7,21 +7,41 @@
 //
 
 #import "UIButton+large.h"
+#import <objc/runtime.h>
+
+
 
 @implementation UIButton (large)
 
-
-- (CGRect)enlargedRect {
-//        return CGRectMake(self.bounds.origin.x - 100,
-//                          self.bounds.origin.y - 100,
-//                         self.bounds.size.width + 200,
-//                         self.bounds.size.height + 200);
-    return CGRectMake(self.bounds.origin.x ,
-                      self.bounds.origin.y ,
-                      self.bounds.size.width,
-                      self.bounds.size.height );
-
+    
+    
+-(void)btnBigger:(int)size{
+    objc_setAssociatedObject(self,  @"top", [NSNumber numberWithInt:size], OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self,  @"left", [NSNumber numberWithInt:size], OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self,  @"bottom", [NSNumber numberWithInt:size], OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self,  @"right", [NSNumber numberWithInt:size], OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
+    
+    
+
+- (CGRect)enlargedRect
+    {
+        NSNumber *topEdge = objc_getAssociatedObject(self, @"top");
+        NSNumber *leftEdge = objc_getAssociatedObject(self, @"left");
+        NSNumber *bottomEdge = objc_getAssociatedObject(self, @"bottom");
+        NSNumber *rightEdge = objc_getAssociatedObject(self, @"right");
+        
+        if (topEdge && rightEdge && bottomEdge && leftEdge){
+            
+            return CGRectMake(self.bounds.origin.x - leftEdge.floatValue,
+                              self.bounds.origin.y - topEdge.floatValue,
+                              self.bounds.size.width + leftEdge.floatValue + rightEdge.floatValue,
+                              self.bounds.size.height + topEdge.floatValue + bottomEdge.floatValue);
+        }else{
+            
+            return self.bounds;
+        }
+    }
 
 - (UIView*)hitTest:(CGPoint)point withEvent:(UIEvent*)event {
     CGRect rect = [self enlargedRect];

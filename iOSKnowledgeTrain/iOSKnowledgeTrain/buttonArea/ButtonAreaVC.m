@@ -47,7 +47,7 @@
 
 
 -(void)changeBtnArea{
-    
+    [self.btn btnBigger:100];
 }
 
 
