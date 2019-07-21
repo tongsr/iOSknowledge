@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0085044922E3730900047430 /* CoreGraphicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085044722E3730900047430 /* CoreGraphicVC.m */; };
 		0085044A22E3730900047430 /* CoreGraphicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0085044822E3730900047430 /* CoreGraphicVC.xib */; };
+		0085044D22E48BB800047430 /* CoreGraphicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085044C22E48BB800047430 /* CoreGraphicView.m */; };
+		0085045222E4A76F00047430 /* CoreAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085045022E4A76F00047430 /* CoreAnimationVC.m */; };
+		0085045322E4A76F00047430 /* CoreAnimationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0085045122E4A76F00047430 /* CoreAnimationVC.xib */; };
 		960C1E2A22DC42C300000EA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E2922DC42C300000EA5 /* AppDelegate.m */; };
 		960C1E2D22DC42C300000EA5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E2C22DC42C300000EA5 /* ViewController.m */; };
 		960C1E3022DC42C300000EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960C1E2E22DC42C300000EA5 /* Main.storyboard */; };
@@ -32,6 +35,11 @@
 		0085044622E3730900047430 /* CoreGraphicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreGraphicVC.h; sourceTree = "<group>"; };
 		0085044722E3730900047430 /* CoreGraphicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicVC.m; sourceTree = "<group>"; };
 		0085044822E3730900047430 /* CoreGraphicVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoreGraphicVC.xib; sourceTree = "<group>"; };
+		0085044B22E48BB800047430 /* CoreGraphicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreGraphicView.h; sourceTree = "<group>"; };
+		0085044C22E48BB800047430 /* CoreGraphicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicView.m; sourceTree = "<group>"; };
+		0085044F22E4A76F00047430 /* CoreAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAnimationVC.h; sourceTree = "<group>"; };
+		0085045022E4A76F00047430 /* CoreAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationVC.m; sourceTree = "<group>"; };
+		0085045122E4A76F00047430 /* CoreAnimationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoreAnimationVC.xib; sourceTree = "<group>"; };
 		960C1E2522DC42C300000EA5 /* iOSKnowledgeTrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSKnowledgeTrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		960C1E2822DC42C300000EA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		960C1E2922DC42C300000EA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,8 +87,20 @@
 				0085044622E3730900047430 /* CoreGraphicVC.h */,
 				0085044722E3730900047430 /* CoreGraphicVC.m */,
 				0085044822E3730900047430 /* CoreGraphicVC.xib */,
+				0085044B22E48BB800047430 /* CoreGraphicView.h */,
+				0085044C22E48BB800047430 /* CoreGraphicView.m */,
 			);
 			path = coreGraphic;
+			sourceTree = "<group>";
+		};
+		0085044E22E4A74E00047430 /* coreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				0085044F22E4A76F00047430 /* CoreAnimationVC.h */,
+				0085045022E4A76F00047430 /* CoreAnimationVC.m */,
+				0085045122E4A76F00047430 /* CoreAnimationVC.xib */,
+			);
+			path = coreAnimation;
 			sourceTree = "<group>";
 		};
 		960C1E1C22DC42C300000EA5 = {
@@ -102,6 +122,7 @@
 		960C1E2722DC42C300000EA5 /* iOSKnowledgeTrain */ = {
 			isa = PBXGroup;
 			children = (
+				0085044E22E4A74E00047430 /* coreAnimation */,
 				0085044522E3729E00047430 /* coreGraphic */,
 				960C1E6722E1C91600000EA5 /* kvo */,
 				960C1E5922DEF5DA00000EA5 /* buttonArea */,
@@ -239,6 +260,7 @@
 				960C1E3022DC42C300000EA5 /* Main.storyboard in Resources */,
 				960C1E4722DC435200000EA5 /* RuntimeVC.xib in Resources */,
 				960C1E5E22DEF5FE00000EA5 /* ButtonAreaVC.xib in Resources */,
+				0085045322E4A76F00047430 /* CoreAnimationVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,8 +275,10 @@
 				960C1E6522E07C1E00000EA5 /* NSThreadVC.m in Sources */,
 				960C1E5322DC61E600000EA5 /* RuntimeObj+test.m in Sources */,
 				960C1E2D22DC42C300000EA5 /* ViewController.m in Sources */,
+				0085045222E4A76F00047430 /* CoreAnimationVC.m in Sources */,
 				960C1E5722DC6D5B00000EA5 /* RunloopVC.m in Sources */,
 				960C1E3822DC42C400000EA5 /* main.m in Sources */,
+				0085044D22E48BB800047430 /* CoreGraphicView.m in Sources */,
 				960C1E2A22DC42C300000EA5 /* AppDelegate.m in Sources */,
 				960C1E4622DC435200000EA5 /* RuntimeVC.m in Sources */,
 				960C1E4A22DC5EAF00000EA5 /* RuntimeObj.m in Sources */,

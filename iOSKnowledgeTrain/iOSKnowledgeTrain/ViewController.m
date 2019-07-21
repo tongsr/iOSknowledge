@@ -11,6 +11,8 @@
 #import "RunloopVC.h"
 #import "ButtonAreaVC.h"
 #import "NSThreadVC.h"
+#import "CoreGraphicVC.h"
+#import "CoreAnimationVC.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 - (IBAction)goRuntime:(id)sender;
@@ -28,7 +30,7 @@
     [super viewDidLoad];
     self.tableview.delegate=self;
     self.tableview.dataSource=self;
-    self.array=[NSArray arrayWithObjects:@"runtime",@"runloop",@"buttonArea",@"NSThread",@"kvo", nil];
+    self.array=[NSArray arrayWithObjects:@"runtime",@"runloop",@"buttonArea",@"NSThread",@"kvo",@"CoreGraphic",@"coreAnimation", nil];
     [self.tableview reloadData];
 }
 
@@ -92,6 +94,12 @@
         case 4:
             [self goKvoKvc];
             break;
+        case 5:
+            [self goCoreGraphicVC];
+            break;
+        case 6:
+            [self goCoreAnimation];
+            break;
         default:
             break;
     }
@@ -110,4 +118,21 @@
     
 }
 
+    
+    
+    
+-(void)goCoreGraphicVC{
+    CoreGraphicVC *vc = [[CoreGraphicVC alloc]initWithNibName:@"CoreGraphicVC" bundle:nil];
+    vc.title=@"CoreGraphic";
+    [self.navigationController pushViewController:vc animated:YES];
+}
+ 
+    
+    
+    
+-(void)goCoreAnimation{
+    CoreAnimationVC *vc = [[CoreAnimationVC alloc]initWithNibName:@"CoreAnimationVC" bundle:nil];
+    vc.title=@"CoreAnimation";
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end
