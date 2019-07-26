@@ -29,6 +29,8 @@
 		960C1E6122DF152400000EA5 /* UIButton+large.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E6022DF152400000EA5 /* UIButton+large.m */; };
 		960C1E6522E07C1E00000EA5 /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C1E6322E07C1E00000EA5 /* NSThreadVC.m */; };
 		960C1E6622E07C1E00000EA5 /* NSThreadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C1E6422E07C1E00000EA5 /* NSThreadVC.xib */; };
+		9676A95022EAD2BD00B5B7F3 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9676A94E22EAD2BD00B5B7F3 /* KVOViewController.m */; };
+		9676A95122EAD2BD00B5B7F3 /* KVOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9676A94F22EAD2BD00B5B7F3 /* KVOViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,9 @@
 		960C1E6222E07C1E00000EA5 /* NSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
 		960C1E6322E07C1E00000EA5 /* NSThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadVC.m; sourceTree = "<group>"; };
 		960C1E6422E07C1E00000EA5 /* NSThreadVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSThreadVC.xib; sourceTree = "<group>"; };
+		9676A94D22EAD2BD00B5B7F3 /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		9676A94E22EAD2BD00B5B7F3 /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
+		9676A94F22EAD2BD00B5B7F3 /* KVOViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KVOViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +196,9 @@
 		960C1E6722E1C91600000EA5 /* kvo */ = {
 			isa = PBXGroup;
 			children = (
+				9676A94D22EAD2BD00B5B7F3 /* KVOViewController.h */,
+				9676A94E22EAD2BD00B5B7F3 /* KVOViewController.m */,
+				9676A94F22EAD2BD00B5B7F3 /* KVOViewController.xib */,
 			);
 			path = kvo;
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 				0085044A22E3730900047430 /* CoreGraphicVC.xib in Resources */,
 				960C1E3222DC42C400000EA5 /* Assets.xcassets in Resources */,
 				960C1E5822DC6D5B00000EA5 /* RunloopVC.xib in Resources */,
+				9676A95122EAD2BD00B5B7F3 /* KVOViewController.xib in Resources */,
 				960C1E3022DC42C300000EA5 /* Main.storyboard in Resources */,
 				960C1E4722DC435200000EA5 /* RuntimeVC.xib in Resources */,
 				960C1E5E22DEF5FE00000EA5 /* ButtonAreaVC.xib in Resources */,
@@ -276,6 +285,7 @@
 				960C1E5322DC61E600000EA5 /* RuntimeObj+test.m in Sources */,
 				960C1E2D22DC42C300000EA5 /* ViewController.m in Sources */,
 				0085045222E4A76F00047430 /* CoreAnimationVC.m in Sources */,
+				9676A95022EAD2BD00B5B7F3 /* KVOViewController.m in Sources */,
 				960C1E5722DC6D5B00000EA5 /* RunloopVC.m in Sources */,
 				960C1E3822DC42C400000EA5 /* main.m in Sources */,
 				0085044D22E48BB800047430 /* CoreGraphicView.m in Sources */,

@@ -13,6 +13,7 @@
 #import "NSThreadVC.h"
 #import "CoreGraphicVC.h"
 #import "CoreAnimationVC.h"
+#import "KVOViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 - (IBAction)goRuntime:(id)sender;
@@ -115,7 +116,9 @@
 }
 
 -(void)goKvoKvc{
-    
+    KVOViewController *vc =[[KVOViewController alloc]initWithNibName:@"KVOViewController" bundle:nil];
+    vc.title=@"KVO";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
     
