@@ -14,6 +14,7 @@
 #import "CoreGraphicVC.h"
 #import "CoreAnimationVC.h"
 #import "KVOViewController.h"
+#import "TouchEventVC.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 - (IBAction)goRuntime:(id)sender;
@@ -31,7 +32,7 @@
     [super viewDidLoad];
     self.tableview.delegate=self;
     self.tableview.dataSource=self;
-    self.array=[NSArray arrayWithObjects:@"runtime",@"runloop",@"buttonArea",@"NSThread",@"kvo",@"CoreGraphic",@"coreAnimation", nil];
+    self.array=[NSArray arrayWithObjects:@"runtime",@"runloop",@"buttonArea",@"NSThread",@"kvo",@"CoreGraphic",@"coreAnimation",@"TouchEvent", nil];
     [self.tableview reloadData];
 }
 
@@ -101,9 +102,20 @@
         case 6:
             [self goCoreAnimation];
             break;
+        case 7:
+            [self goTouchEvent];
+            break;
         default:
             break;
     }
+}
+
+
+
+-(void)goTouchEvent{
+    TouchEventVC *vc = [[TouchEventVC alloc]initWithNibName:@"TouchEventVC" bundle:nil];
+    vc.title=@"TouchEvent";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

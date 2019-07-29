@@ -8,14 +8,27 @@
 
 #import "TouchView.h"
 
+
+@interface TouchView()
+
+@end
+
+
 @implementation TouchView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+-(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+    if ([super pointInside:point withEvent:event]) {
+        return self;
+    }
+    else return nil;
 }
-*/
+
+
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+}
+
 
 @end

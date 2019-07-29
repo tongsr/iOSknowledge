@@ -31,6 +31,9 @@
 		960C1E6622E07C1E00000EA5 /* NSThreadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C1E6422E07C1E00000EA5 /* NSThreadVC.xib */; };
 		9676A95022EAD2BD00B5B7F3 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9676A94E22EAD2BD00B5B7F3 /* KVOViewController.m */; };
 		9676A95122EAD2BD00B5B7F3 /* KVOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9676A94F22EAD2BD00B5B7F3 /* KVOViewController.xib */; };
+		9676A95622EEF27300B5B7F3 /* TouchEventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9676A95422EEF27300B5B7F3 /* TouchEventVC.m */; };
+		9676A95722EEF27300B5B7F3 /* TouchEventVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9676A95522EEF27300B5B7F3 /* TouchEventVC.xib */; };
+		9676A95A22EEF31000B5B7F3 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9676A95922EEF31000B5B7F3 /* TouchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,11 @@
 		9676A94D22EAD2BD00B5B7F3 /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
 		9676A94E22EAD2BD00B5B7F3 /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		9676A94F22EAD2BD00B5B7F3 /* KVOViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KVOViewController.xib; sourceTree = "<group>"; };
+		9676A95322EEF27300B5B7F3 /* TouchEventVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchEventVC.h; sourceTree = "<group>"; };
+		9676A95422EEF27300B5B7F3 /* TouchEventVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchEventVC.m; sourceTree = "<group>"; };
+		9676A95522EEF27300B5B7F3 /* TouchEventVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchEventVC.xib; sourceTree = "<group>"; };
+		9676A95822EEF31000B5B7F3 /* TouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
+		9676A95922EEF31000B5B7F3 /* TouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +135,7 @@
 		960C1E2722DC42C300000EA5 /* iOSKnowledgeTrain */ = {
 			isa = PBXGroup;
 			children = (
+				9676A95222EEF23E00B5B7F3 /* touchEvent */,
 				0085044E22E4A74E00047430 /* coreAnimation */,
 				0085044522E3729E00047430 /* coreGraphic */,
 				960C1E6722E1C91600000EA5 /* kvo */,
@@ -203,6 +212,18 @@
 			path = kvo;
 			sourceTree = "<group>";
 		};
+		9676A95222EEF23E00B5B7F3 /* touchEvent */ = {
+			isa = PBXGroup;
+			children = (
+				9676A95322EEF27300B5B7F3 /* TouchEventVC.h */,
+				9676A95422EEF27300B5B7F3 /* TouchEventVC.m */,
+				9676A95522EEF27300B5B7F3 /* TouchEventVC.xib */,
+				9676A95822EEF31000B5B7F3 /* TouchView.h */,
+				9676A95922EEF31000B5B7F3 /* TouchView.m */,
+			);
+			path = touchEvent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +287,7 @@
 				960C1E3222DC42C400000EA5 /* Assets.xcassets in Resources */,
 				960C1E5822DC6D5B00000EA5 /* RunloopVC.xib in Resources */,
 				9676A95122EAD2BD00B5B7F3 /* KVOViewController.xib in Resources */,
+				9676A95722EEF27300B5B7F3 /* TouchEventVC.xib in Resources */,
 				960C1E3022DC42C300000EA5 /* Main.storyboard in Resources */,
 				960C1E4722DC435200000EA5 /* RuntimeVC.xib in Resources */,
 				960C1E5E22DEF5FE00000EA5 /* ButtonAreaVC.xib in Resources */,
@@ -284,6 +306,8 @@
 				960C1E6522E07C1E00000EA5 /* NSThreadVC.m in Sources */,
 				960C1E5322DC61E600000EA5 /* RuntimeObj+test.m in Sources */,
 				960C1E2D22DC42C300000EA5 /* ViewController.m in Sources */,
+				9676A95A22EEF31000B5B7F3 /* TouchView.m in Sources */,
+				9676A95622EEF27300B5B7F3 /* TouchEventVC.m in Sources */,
 				0085045222E4A76F00047430 /* CoreAnimationVC.m in Sources */,
 				9676A95022EAD2BD00B5B7F3 /* KVOViewController.m in Sources */,
 				960C1E5722DC6D5B00000EA5 /* RunloopVC.m in Sources */,

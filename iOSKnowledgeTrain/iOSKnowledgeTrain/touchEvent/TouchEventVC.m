@@ -7,26 +7,23 @@
 //
 
 #import "TouchEventVC.h"
+#import "TouchView.h"
 
 @interface TouchEventVC ()
-
+@property(nonatomic,strong)TouchView *touchView;
 @end
 
 @implementation TouchEventVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.touchView = [[TouchView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
+    self.touchView.backgroundColor=[UIColor blueColor];
+    [self.view addSubview:self.touchView];
     // Do any additional setup after loading the view from its nib.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
