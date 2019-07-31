@@ -18,16 +18,30 @@
 
 
 -(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-    if ([super pointInside:point withEvent:event]) {
-        return self;
+    
+//    if ([super pointInside:point withEvent:event]) {
+//        NSLog(@"touch %@",self.name);
+//    }
+//    else{
+//        NSLog(@"not touch %@",self.name);
+//    }
+    
+    if (CGRectContainsPoint(self.bounds, point)) {
+        NSLog(@"touch %@  event  %@",self.name,event.description);
+    }else{
+        NSLog(@"not touch %@",self.name);
     }
-    else return nil;
+    
+    return [super hitTest:point withEvent:event];
 }
 
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touch begin %@",self.name);
+}
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
+
+    NSLog(@"touch end %@",self.name);
 }
 
 
