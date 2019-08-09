@@ -28,11 +28,13 @@
     
     if (CGRectContainsPoint(self.bounds, point)) {
         NSLog(@"touch %@  event  %@",self.name,event.description);
+        return [super hitTest:point withEvent:event];
     }else{
         NSLog(@"not touch %@",self.name);
+        return nil;
     }
     
-    return [super hitTest:point withEvent:event];
+    //return [super hitTest:point withEvent:event];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -40,8 +42,7 @@
 }
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-
-    NSLog(@"touch end %@",self.name);
+        NSLog(@"touch end outSide %@",self.name);
 }
 
 

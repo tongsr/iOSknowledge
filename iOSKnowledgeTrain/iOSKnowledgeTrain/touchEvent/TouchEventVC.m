@@ -38,8 +38,8 @@
     [self.touchView addSubview:self.touchSubView2];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(touchFunc)];
-    tap.numberOfTapsRequired=2;
-    [self.touchSubView2 addGestureRecognizer:tap];
+    tap.numberOfTapsRequired=1;
+    //[self.touchSubView2 addGestureRecognizer:tap];
     
 }
 
