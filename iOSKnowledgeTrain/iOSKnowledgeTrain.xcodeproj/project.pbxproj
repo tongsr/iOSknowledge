@@ -37,6 +37,8 @@
 		9676A96222FD453A00B5B7F3 /* TSREncryptionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9676A96122FD453A00B5B7F3 /* TSREncryptionTool.m */; };
 		9676A96822FD48B200B5B7F3 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 9676A96422FD48B200B5B7F3 /* NSString+Hash.m */; };
 		9676A96922FD48B200B5B7F3 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9676A96522FD48B200B5B7F3 /* GTMBase64.m */; };
+		9676A97F230B82A000B5B7F3 /* SwiftTrainingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9676A97D230B82A000B5B7F3 /* SwiftTrainingVC.swift */; };
+		9676A980230B82A000B5B7F3 /* SwiftTrainingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9676A97E230B82A000B5B7F3 /* SwiftTrainingVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,9 @@
 		9676A96522FD48B200B5B7F3 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		9676A96622FD48B200B5B7F3 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		9676A96722FD48B200B5B7F3 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		9676A97C230B82A000B5B7F3 /* iOSKnowledgeTrain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSKnowledgeTrain-Bridging-Header.h"; sourceTree = "<group>"; };
+		9676A97D230B82A000B5B7F3 /* SwiftTrainingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTrainingVC.swift; sourceTree = "<group>"; };
+		9676A97E230B82A000B5B7F3 /* SwiftTrainingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftTrainingVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +150,7 @@
 		960C1E2722DC42C300000EA5 /* iOSKnowledgeTrain */ = {
 			isa = PBXGroup;
 			children = (
+				9676A97B230B826800B5B7F3 /* swift */,
 				9676A95F22FD44D000B5B7F3 /* encryption */,
 				9676A95222EEF23E00B5B7F3 /* touchEvent */,
 				0085044E22E4A74E00047430 /* coreAnimation */,
@@ -249,6 +255,16 @@
 			path = encryption;
 			sourceTree = "<group>";
 		};
+		9676A97B230B826800B5B7F3 /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				9676A97D230B82A000B5B7F3 /* SwiftTrainingVC.swift */,
+				9676A97E230B82A000B5B7F3 /* SwiftTrainingVC.xib */,
+				9676A97C230B82A000B5B7F3 /* iOSKnowledgeTrain-Bridging-Header.h */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,6 +296,7 @@
 				TargetAttributes = {
 					960C1E2422DC42C300000EA5 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -312,6 +329,7 @@
 				960C1E3222DC42C400000EA5 /* Assets.xcassets in Resources */,
 				960C1E5822DC6D5B00000EA5 /* RunloopVC.xib in Resources */,
 				9676A95122EAD2BD00B5B7F3 /* KVOViewController.xib in Resources */,
+				9676A980230B82A000B5B7F3 /* SwiftTrainingVC.xib in Resources */,
 				9676A95722EEF27300B5B7F3 /* TouchEventVC.xib in Resources */,
 				960C1E3022DC42C300000EA5 /* Main.storyboard in Resources */,
 				960C1E4722DC435200000EA5 /* RuntimeVC.xib in Resources */,
@@ -329,6 +347,7 @@
 			files = (
 				960C1E6122DF152400000EA5 /* UIButton+large.m in Sources */,
 				9676A96922FD48B200B5B7F3 /* GTMBase64.m in Sources */,
+				9676A97F230B82A000B5B7F3 /* SwiftTrainingVC.swift in Sources */,
 				960C1E6522E07C1E00000EA5 /* NSThreadVC.m in Sources */,
 				960C1E5322DC61E600000EA5 /* RuntimeObj+test.m in Sources */,
 				960C1E2D22DC42C300000EA5 /* ViewController.m in Sources */,
@@ -487,7 +506,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CMZTY8BDV6;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = iOSKnowledgeTrain/Info.plist;
@@ -498,6 +519,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tctsr.iOSKnowledgeTrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSKnowledgeTrain/swift/iOSKnowledgeTrain-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = arm64;
 			};
@@ -507,7 +531,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CMZTY8BDV6;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = iOSKnowledgeTrain/Info.plist;
@@ -518,6 +544,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tctsr.iOSKnowledgeTrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSKnowledgeTrain/swift/iOSKnowledgeTrain-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = arm64;
 			};

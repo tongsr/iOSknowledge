@@ -15,6 +15,7 @@
 #import "CoreAnimationVC.h"
 #import "KVOViewController.h"
 #import "TouchEventVC.h"
+#import "iOSKnowledgeTrain-Swift.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 - (IBAction)goRuntime:(id)sender;
@@ -32,8 +33,9 @@
     [super viewDidLoad];
     self.tableview.delegate=self;
     self.tableview.dataSource=self;
-    self.array=[NSArray arrayWithObjects:@"runtime",@"runloop",@"buttonArea",@"NSThread",@"kvo",@"CoreGraphic",@"coreAnimation",@"TouchEvent", nil];
+    self.array=[NSArray arrayWithObjects:@"runtime",@"runloop",@"buttonArea",@"NSThread",@"kvo",@"CoreGraphic",@"coreAnimation",@"TouchEvent",@"swift", nil];
     [self.tableview reloadData];
+
 }
 
 
@@ -105,10 +107,24 @@
         case 7:
             [self goTouchEvent];
             break;
+        case 8:
+            [self goSwift];
+            break;
         default:
             break;
     }
 }
+
+
+
+
+
+-(void)goSwift{
+    SwiftTrainingVC *vc = [[SwiftTrainingVC alloc]initWithNibName:@"SwiftTrainingVC" bundle:nil];
+    vc.title = @"swift";
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 
 
